@@ -13,6 +13,7 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 /* Nav start */
 .navbar {
@@ -48,7 +49,7 @@ body {
     text-align: center;
 }
 .navbar li:hover {
-    background-color: var(--pink);
+    background-color: var(--blue);
 }
 /* Nav end - about start */
 .welcome-section {
@@ -202,4 +203,10 @@ body {
 footer p {
     font-size: 1.5rem;
     color: var(--white);
+}
+@media only screen and (max-width="900px") {
+.container {
+    max-width: 500px;
+    margin: 30px;
+}
 }
