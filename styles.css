@@ -14,15 +14,16 @@ body {
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    width: 100%;
 }
 /* Nav start */
 .navbar {
     position: fixed;
     background-color: var(--red);
-    width: 100%;
     display: flex;
     /* box-shadow: 0px 2px var(--black); */
     backdrop-filter: blur(70px);
+    width: 100%;
 } 
 .navbar ul {
     list-style-type: none;
@@ -68,6 +69,7 @@ body {
     padding: 0;
     margin: 0;
     color: var(--black);
+    text-align: center;
 }
 .welcome-section p, .contact-header p {
     font-family: 'Poppins', sans-serif;
@@ -78,7 +80,6 @@ body {
 }
 /* about end - work start */
 .project-section {
-    width: 100%;
     padding: 2rem;
     background-color: var(--blue);
     display: block;
@@ -128,9 +129,10 @@ body {
     border-radius: 5px;
 }
 .project-title {
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .button {
     background-color: var(--dark-grey);
@@ -148,7 +150,6 @@ body {
 }
 /* work end - contact start */
 .contact {
-    width: 100%;
     height: 85vh;
     text-align: center;
     padding: 20px;
@@ -173,6 +174,8 @@ body {
  }
 .contact-link {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -205,9 +208,21 @@ footer p {
     font-size: 1.5rem;
     color: var(--white);
 }
-@media only screen and (max-width="900px") {
-.container {
-    max-width: 500px;
-    margin: 30px;
-}
+@media only screen and (max-width: 900px) {
+    .welcome-section h1, .contact-header h1 {
+        font-size: 2.75rem;
+    }
+    .project-section h1 {
+        font-size: 1.75rem;
+    }
+    .contact-link {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        margin-top: 50px;
+        font-size: 1rem;
+    }
 }
